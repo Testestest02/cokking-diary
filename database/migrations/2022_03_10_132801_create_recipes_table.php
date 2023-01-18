@@ -16,7 +16,7 @@ class CreateRecipesTable extends Migration
         Schema::create('recipes', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('user_id')->unsigned()->index()->comment('ユーザーID');
-            $table->string('name', 100)->index()->comment('レシピ名');
+            $table->string('name', 100)->charset("utf8")->index()->comment('レシピ名');
             $table->text('url')->comment('レシピURL');
             $table->string('comment')->nullable()->comment('コメント');
             $table->string('task')->default('OFF')->comment('レシピタスク(ON/OFF)');
