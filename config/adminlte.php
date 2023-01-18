@@ -228,22 +228,22 @@ return [
         [
             'text' => 'レシピ一覧',
             'url'  => 'recipe',
-            'icon' => 'fas fa-gamepad',
+            'icon' => 'fas fa-utensils',
         ],
         [
             'text' => '調理タスク一覧',
             'url'  => 'task',
-            'icon' => 'fas fa-gamepad',
+            'icon' => 'fas fa-bookmark',
         ],
         [
             'text' => '調理日記一覧',
             'url'  => 'diary',
-            'icon' => 'fas fa-gamepad',
+            'icon' => 'fas fa-book',
         ],
         [
             'text' => 'マイアカウント',
             'url'  => 'myAccount',
-            'icon' => 'fas fa-gamepad',
+            'icon' => 'fas fa-id-card',
         ],        
 
 
