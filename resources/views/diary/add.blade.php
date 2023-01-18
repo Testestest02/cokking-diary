@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', '商品登録')
+@section('title', 'レシピ登録')
 
 @section('content_header')
-    <h1>商品登録</h1>
+    <h1>レシピ登録</h1>
 @stop
 
 @section('content')
@@ -24,21 +24,22 @@
                     @csrf
                     <div class="card-body">
                         <div class="form-group">
-                            <label for="name">名前</label>
-                            <input type="text" class="form-control" id="name" name="name" placeholder="名前">
+                            <label for="recipes">レシピ名</label>
+                            <div>
+                                <select class="form-control" id="recipes" name="recipe_id">
+                                    @foreach ($recipes as $recipe)
+                                    <option value="{{ $recipe->id }}" {{ is_array(old("recipes")) && in_array("$recipe->id", old("recipes"), true)? ' selected' : '' }}>{{ $recipe->name }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
                         </div>
-
                         <div class="form-group">
-                            <label for="type">種別</label>
-                            <input type="number" class="form-control" id="type" name="type" placeholder="1, 2, 3, ...">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="detail">詳細</label>
-                            <input type="text" class="form-control" id="detail" name="detail" placeholder="詳細説明">
+                            <label for="days">作成日</label>
+                            <div>
+                                <input type="date" name="dayname" />
+                            </div>
                         </div>
                     </div>
-
                     <div class="card-footer">
                         <button type="submit" class="btn btn-primary">登録</button>
                     </div>
