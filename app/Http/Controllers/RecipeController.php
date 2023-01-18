@@ -163,7 +163,7 @@ class RecipeController extends Controller
         if ($request->isMethod('post')) {
             // バリデーション
             $this->validate($request, [
-                'name' => 'required|max:10',
+                'name' => 'required|max:10|unique:foods',
             ]);
             // 食材登録
             Food::create([

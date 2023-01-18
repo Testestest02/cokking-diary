@@ -61,6 +61,12 @@ class FoodSeeder extends Seeder
             'name' => 'ニラ',
         ]);
         Food::create([
+            'name' => '長ネギ',
+        ]);
+        Food::create([
+            'name' => '玉ねぎ',
+        ]);
+        Food::create([
             'name' => '大根',
         ]);
         Food::create([
@@ -83,6 +89,12 @@ class FoodSeeder extends Seeder
         ]);
         Food::create([
             'name' => 'ゴボウ',
+        ]);
+        Food::create([
+            'name' => 'ニンニク',
+        ]);
+        Food::create([
+            'name' => '生姜',
         ]);
         Food::create([
             'name' => 'チーズ',
